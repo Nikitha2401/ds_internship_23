@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REGULAR EXPRESSIONS</title>
+    </head>
+    <body style="background-color:rgb(187, 243, 244);"></body>
+        <main role ="main" class = " container">
+            <br><br><br>
+            <h1 style="text-align: center; font-size: 40px; padding-top: 0;"> REGULAR EXPRESSIONS</h1>
+            <div style="text-align: center; padding-left : 2rem;">
+              <h3> - Search any docstring for a pattern</h3>
+            </div> <br>
+            <div class="content-section" style="display:flex; justify-content:center; align-items:center;"></div>
+                <form method="post" action="{{ url_for('result') }}">
+                    <label for="function-selection">Choose a function:</label>
+                    <select name="function" id="function-selection">
+                        <option value="">--Choose an option--</option>
+                        <option value="findall">findall</option>
+                        <option value="search">search</option>
+                        <option value="split">split</option>
+                        <option value="sub">sub</option>
+                    </select>
+                    <div style="display:flex; justify-content:center; align-items:center;">
+                        <input type="text" id="string" name="string" size="30" required
+                            minlength="3" placeholder="Insert a  string here" class="flashy-textbox">
+                    </div> <br>
+                    <div style="display:flex; justify-content:center; align-items:center ;">
+                        <input type="text" id="patterm" name="pattern" size="30" required
+                          minlength="1" placeholder="Insert regular expression here" class="flashy-textbox">
+                    </div> <br>
+                    <div style="display:flex; justify-content:center; align-items:center;">
+                       <button type="submit" class="flashy-button">Search</button>
+                    </div>
+                </form>
+            
+            </div>
+        </main>
+    </body>
+</html>
+   
+
+
